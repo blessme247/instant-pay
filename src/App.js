@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Transfer from './Routes/Transfer';
+import Payment from './Routes/Payment';
+import { Route, Routes } from 'react-router-dom';
+
+// RCP_jhmt081kpx5ug2i recipient_code
+// RCP_tadggk6l0uwykce Dimeji recipient code 
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <Routes>
+      <Route path="/" element={<Payment />} />
+      <Route path="/transfer" element={<Transfer />} />
+    </Routes>
+  
   );
 }
 
 export default App;
+
+
