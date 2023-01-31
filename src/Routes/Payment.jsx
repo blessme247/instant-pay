@@ -1,12 +1,15 @@
 import React from 'react'
 import { useState } from 'react';
-import './payment.css';
+// import './payment.css';
+import '../App.css'
 import { PaystackButton } from 'react-paystack'
+import Header from '../Components/Header';
+import Decription from '../Components/Decription';
 
 const Payment = () => {
   
     const publicKey = "pk_test_d963fe0bc6fb66484f044ec3dd2004af5a8c9304";
-    const amount = 1000000; // Remember, set in kobo!
+    const amount = 2500000; // Remember, set in kobo!
     const [email, setEmail] = useState("")
     const [name, setName] = useState("")
     const [phone, setPhone] = useState("")
@@ -27,17 +30,19 @@ const Payment = () => {
     
     
     return (
-      <div className="App">
+      
+    <div> 
+        <Header />
     <div className="container">
       <div className="item">
         <div className="overlay-effect"></div>
         <img
           className="item-image"
-          src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+          src="https://images.unsplash.com/photo-1673201896926-98b5892ce20c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTA1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=50"
           alt="product"
         />
         <div className="item-details">
-          <p className="item-details__title">Coconut Oil</p>
+          <p className="item-details__title">Foldable Wooden Chair</p>
           <p className="item-details__amount">NGN{amount / 100}</p>
         </div>
       </div>
@@ -73,7 +78,8 @@ const Payment = () => {
         </div>
       </div>
     </div>
-  </div>
+    <Decription text={"Form integrated with"} linkURL={"https://paystack.com/docs/guides/accept_payments_on_your_react_app"} target={"_blank"} linkText={"Accept Payments API"} />
+    </div>
   )
 }
 

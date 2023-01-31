@@ -1,4 +1,3 @@
-import Transfer from './Routes/Transfer';
 import Payment from './Routes/Payment';
 import { Route, Routes } from 'react-router-dom';
 import Plans from './Routes/Plans';
