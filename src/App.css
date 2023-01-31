@@ -51,6 +51,7 @@ body {
   flex-direction: row;
   margin: 5% auto;
   width: 635px;
+  max-width: 90%;
   height: 380px;
   background: white;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
@@ -203,4 +204,16 @@ body {
   .flexWrapper {
     flex-direction: column;
   }
+  .container {
+    flex-direction: column;
+    height: auto;
+    max-width: 80%;
+  }
+  .item, .checkout {
+    width: 100%;
+  }
+  .nav-links {
+    width: 50%;
+  }
+ 
 }

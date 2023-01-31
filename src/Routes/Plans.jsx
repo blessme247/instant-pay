@@ -34,11 +34,9 @@ const Plans = () => {
         }
       );
       if (response.data.status === true) {
-        console.log(response)
         toast.success("Plan Successfully Created", { position: "top-center" });
         event.target.reset();
         const {data} = response.data;
-        console.log(data, "data")
         const planDetails = []
         planDetails.push({name: data.name})
         planDetails.push({amount: data.amount})
@@ -57,9 +55,6 @@ const Plans = () => {
 
         toast.error(error.response.data.message, {position: "top-center"});
       }
-      // if(error.response.)
-      // console.log(error, "Error Message")
-      // toast.error("Failed", {position: "top-center"});
     }
   };
 

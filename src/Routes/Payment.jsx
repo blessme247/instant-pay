@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react';
-// import './payment.css';
 import '../App.css'
 import { PaystackButton } from 'react-paystack'
 import Header from '../Components/Header';
