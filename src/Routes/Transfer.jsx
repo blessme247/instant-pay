@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import '../App.css'
 import axios from 'axios'
 
+// RCP_jhmt081kpx5ug2i recipient_code
+// RCP_tadggk6l0uwykce Dimeji recipient code 
+
 const Transfer = () => {
 
     const [amount, setAmount] = useState("")
@@ -11,18 +14,17 @@ const Transfer = () => {
     const secretKey = "sk_test_fd0b8f410f1cab062ba78c47b366ff4f5a09c3b3"
 
    const onSubmit = async () => {
-        const header = {
-            Authorization: `Bearer ${secretKey}`,
-            "content-type": "application/json"
-        }
+    
         const response = await axios.post("https://api.paystack.co/transfer", 
         {
-           headers:header,
-            body: {
                 source: "balance",
                 amount, recipient, 
                 reason: description
-            }
+        }, {
+            headers :{
+                     Authorization: `Bearer ${secretKey}`,
+                    "content-type": "application/json"
+                }
         }
 
         )
