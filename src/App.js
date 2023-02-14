@@ -10,7 +10,7 @@ function App() {
   
   return (
     <React.Fragment> 
-    <ToastContainer autoClose={2000} />
+    <ToastContainer autoClose={2000} theme="colored" />
     <Routes>
       <Route path="/" element={<Payment />} />
       <Route path="/plans" element={<Plans />} />
