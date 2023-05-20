@@ -17,7 +17,7 @@ Error handling: The API includes robust error handling capabilities, providing d
 ## Installation
 $ git clone https://github.com/blessme247/instant-pay.git
 
-$ cd musica-app
+$ cd instant-pay
 
 $ npm install  # to install npm packages and dependencies
 
